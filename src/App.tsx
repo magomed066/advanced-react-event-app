@@ -1,11 +1,15 @@
+import { Layout } from 'antd'
 import { Routes } from 'react-router-dom'
-import { AppRouter } from './components'
+import { AppRouter, Navbar } from './components'
 
 function App() {
 	return (
-		<div className="App">
-			<AppRouter key={'as'} />
-		</div>
+		<Layout>
+			<Navbar />
+			<Layout.Content>
+				<AppRouter key={'as'} />
+			</Layout.Content>
+		</Layout>
 	)
 }
 
